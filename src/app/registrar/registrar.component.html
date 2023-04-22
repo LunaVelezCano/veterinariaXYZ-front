@@ -1,0 +1,82 @@
+
+<h1 class="titulo"> Registrar Mascota  </h1>
+    <br>
+
+    <button routerLink="/home" class="home">Home
+      <abbr title="Home">
+        <mat-icon>
+          home
+        </mat-icon>
+      </abbr>
+    </button>
+    <button class="save" > guardar
+      <abbr title="Guardar">
+        <mat-icon>
+          save
+        </mat-icon>
+      </abbr>
+    </button>
+    <button class="cancel">cancelar
+      <abbr title="Cancelar">
+        <mat-icon>
+          cancel
+        </mat-icon>
+      </abbr>
+    </button>
+      <div class="mat-card">
+        <div class="container">
+
+         <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+          <div>
+            <label for="nmid">ID de mascota:</label>
+            <input type="text" id="nmid" formControlName="nmid">
+          </div>
+          <div>
+            <label for="dsnom_mascota">Nombre de la mascota:</label>
+            <input type="text" id="dsnom_mascota" formControlName="dsnom_mascota">
+          </div>
+          <div>
+            <label for="dsespecie">Especie:</label>
+            <input type="text" id="dsespecie" formControlName="dsespecie">
+          </div>
+          <div>
+            <label for="dsraza">Raza:</label>
+            <input type="text" id="deraza" formControlName="deraza">
+          </div>
+          <div>
+            <label for="dtf_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="dtf_nacimiento" formControlName="dtf_nacimiento">
+          </div>
+          <div>
+            <label for="dsT_identificacion">Tipo de identificación:</label>
+            <input type="text" id="dsT_identificacion" formControlName="dsT_identificacion">
+          </div>
+          <div>
+            <label for="nmidentificacion">Número de identificación:</label>
+            <input type="number" id="nmidentificacion" formControlName="nmidentificacion">
+          </div>
+          <div>
+            <label for="dsnom_dueno">Nombre del dueño:</label>
+            <input type="text" id="dsnom_dueño" formControlName="dsnom_dueno">
+          </div>
+          <div>
+            <label for="dsciudad">Ciudad:</label>
+            <input type="text" id="dsciudad" formControlName="dsciudad">
+          </div>
+          <div>
+            <label for="dsdireccion">Dirección:</label>
+            <input type="text" id="dsdireccion" formControlName="dsdireccion">
+          </div>
+          <div>
+          <label for="nmtelefono">Numero de telefono:</label>
+          <input type="number" id="nmtelefono" formControlName="nmtelefono">
+        </div>
+        <div>
+          <label for="dtf_registro">Fecha de Registro:</label>
+          <input type="date" id="dtf_registro" formControlName="dtf_registro">
+        </div>
+        </form>
+          <br>
+          <br>
+        </div>
+        </div>

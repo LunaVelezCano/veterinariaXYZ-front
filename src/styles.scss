@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+  background: url(https://c8.alamy.com/compes/2dcmhj3/coqueto-diseno-de-veterinario-sin-costuras-fondo-dibujado-a-mano-de-caras-de-mascotas-y-equipo-veterinario-2dcmhj3.jpg) no-repeat center top;
+    font-family: Arial, Helvetica, sans-serif,
+}

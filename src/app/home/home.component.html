@@ -1,0 +1,17 @@
+<h1 class="titulo"> VETERINARIA XYZ </h1>
+
+<br>
+<br>
+
+  <div class="opciones">
+    <button mat-flat-button [mat-menu-trigger-for]="Menu" color="primary"> Opciones de Registro </button>
+    <mat-menu #Menu="matMenu">
+  <button mat-menu-item routerLink="/registrar"> Registrar Mascota</button>
+  <button mat-menu-item routerLink="/consultar"> Consultar Mascota</button>
+  <button mat-menu-item routerLink="/modificar"> modificar Mascota</button>
+    </mat-menu>
+  </div>
+  <div style="text-align: center;">
+    <router-outlet></router-outlet>
+  </div>
+
