@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MatCardModule } from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HomeComponent } from './home/home.component';
 
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -36,7 +38,8 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
 
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
