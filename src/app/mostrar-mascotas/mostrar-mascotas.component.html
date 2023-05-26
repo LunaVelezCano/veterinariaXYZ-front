@@ -1,0 +1,44 @@
+<h1 class="titulo">Mascotas</h1>
+<br>
+<br>
+<div class="container">
+  <button routerLink="/home" class="home">Home
+    <abbr title="Home">
+      <mat-icon>
+        home
+      </mat-icon>
+    </abbr>
+  </button>
+  <br>
+
+<br>
+<br>
+<div class="container_table">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre mascota</th>
+          <th>Especie</th>
+          <th>Raza</th>
+          <th>Fecha nacimiento</th>
+          <th>Fecha registro</th>
+          <th>Numero identificación dueño</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mascota of infoMascotas">
+          <td>{{ mascota.nmid }}</td>
+          <td>{{ mascota.dsnom_mascota }}</td>
+          <td>{{ mascota.dsespecie }}</td>
+          <td>{{ mascota.dsraza }}</td>
+          <td>{{ mascota.dtf_nacimiento }}</td>
+          <td>{{ mascota.dtf_registro }}</td>
+          <td>{{mascota.nmidentificacion_dueno}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

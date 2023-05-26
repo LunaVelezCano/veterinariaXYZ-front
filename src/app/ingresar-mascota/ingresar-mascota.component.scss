@@ -2,61 +2,90 @@
   text-align:center;
   background-color: rgba(105, 188, 187, 255);
 }
-.opciones{
-  background-color: rgba(71, 115, 178, 255);
-  width: 150px;
-  max-width: 200px;
-  height: 50px;
+
+.container{
+  background-color: rgba(105, 188, 187, 255);;
+  width:90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  border-style: hidden;
-  padding-top: 1%;
-  text-align: center;
 }
-.interactiva_mascota{
-  background-color: rgba(71, 115, 178, 255);
-  width: 150px;
-  max-width: 200px;
-  height: 50px;
+
+.registro-form {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.5rem;
-  border-style: hidden;
-  padding-top: 1%;
-  text-align: center;
+  align-items: left;
+  gap: 5px;
 }
-.interactiva_Usuario{
+
+.home{
   background-color: rgba(71, 115, 178, 255);
   width: 150px;
   max-width: 200px;
   height: 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   border-radius: 0.5rem;
   border-style: hidden;
-  padding-top: 1%;
-  text-align: center;
-}
-.Citas_Veterinaria{
-  background-color: rgba(71, 115, 178, 255);
-  width: 150px;
-  max-width: 200px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.5rem;
-  border-style: hidden;
+  color: white;
   padding-top: 1%;
   text-align: center;
 }
 
+.mostrarMascotas{
+  background-color: rgba(71, 115, 178, 255);
+  width: 150px;
+  max-width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 0.5rem;
+  border-style: hidden;
+  color: white;
+  padding-top: 1%;
+  text-align: center;
+}
 
+.save {
+  background-color: rgba(71, 115, 178, 255);
+  width: 150px;
+  max-width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 0.5rem;
+  border-style: hidden;
+  color: white;
+  padding-top: 1%;
+  text-align: center;
+}
+
+.cancel {
+  background-color: rgba(71, 115, 178, 255);
+  width: 150px;
+  max-width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 0.5rem;
+  border-style: hidden;
+  color: white;
+  padding-top: 1%;
+  text-align: center;
+}

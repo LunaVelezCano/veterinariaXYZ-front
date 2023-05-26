@@ -4,14 +4,41 @@
 <br>
 
   <div class="opciones">
-    <button mat-flat-button [mat-menu-trigger-for]="Menu" color="primary"> Opciones de Registro </button>
-    <mat-menu #Menu="matMenu">
-  <button mat-menu-item routerLink="/registrar"> Registrar Mascota</button>
-  <button mat-menu-item routerLink="/consultar"> Consultar Mascota</button>
-  <button mat-menu-item routerLink="/modificar"> modificar Mascota</button>
+    <button mat-flat-button [mat-menu-trigger-for]="Menu1" color="primary"> Opciones de Ingreso </button>
+    <mat-menu #Menu1="matMenu">
+<button mat-menu-item routerLink="/ingresarDueno">Ingresar Usuario</button>
+  <button mat-menu-item routerLink="/ingresarmascota">ingresar mascota</button>
     </mat-menu>
   </div>
-  <div style="text-align: center;">
+  <br>
+<div class="interactiva_mascota">
+  <button mat-flat-button [matMenuTriggerFor]="Menu2" color="primary">Interactiva mascota</button>
+  <mat-menu #Menu2="matMenu">
+    <button mat-menu-item routerLink="/consultar"> Consultar Mascotas</button>
+    <button mat-menu-item routerLink="/mostrarMascotas"> Ver Mascotas</button>
+  </mat-menu>
+</div>
+<br>
+<div class="interactiva_Usuario">
+<button mat-flat-button [mat-menu-trigger-for]="Menu3" color="primary">Interactiva Usuario</button>
+<mat-menu  #Menu3="matMenu">
+  <button mat-menu-item routerLink="/ConsultarUsuario">Consultar Usuario</button>
+  <button mat-menu-item routerLink="/mostrarUsuario">Ver Usuarios</button>
+</mat-menu>
+</div>
+<br>
+<div class="Citas_Veterinaria">
+  <button mat-flat-button [mat-menu-trigger-for]="Menu4" color="primary">Citas Veterinaria</button>
+  <mat-menu  #Menu4="matMenu">
+    <button mat-menu-item routerLink="/MedicoVeterinario">Veterinarios Disponibles</button>
+    <button mat-menu-item routerLink="/ProgramarCita">Programar Cita</button>
+    <button mat-menu-item routerLink="/ConsultarCita">Consultar/Modificar/Cancelar Cita</button>
+  </mat-menu>
+  </div>
+  <br>
+
+
+  <div style="text-align: center">
     <router-outlet></router-outlet>
   </div>
 

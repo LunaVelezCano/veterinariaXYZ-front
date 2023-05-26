@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { infoMascota } from '../interfaces/infoMascota';
 
@@ -9,6 +9,7 @@ import { infoMascota } from '../interfaces/infoMascota';
 })
 export class RegistroMascotasService {
   servidor = 'http://localhost:8080/api/DatosMascota';
+
   constructor(private servicio: HttpClient) { }
 
   getDatosMascota(): Observable<any> {
@@ -20,9 +21,16 @@ export class RegistroMascotasService {
   }
 
   editar(datosMascota: infoMascota) {
-    return this.servicio.put<infoMascota>(`${this.servidor}/${datosMascota.nmid}`, datosMascota);
+    return this.servicio.put<infoMascota>(`${this.servidor}/${datosMascota.nmid}`, datosMascota.nmid);
+  }
+  guardar(datosMascota: infoMascota) {
+    return this.servicio.put<infoMascota>(this.servidor, datosMascota)
   }
 
 
-}
+  getMascotasByDueno(nmidentificacion_dueno: number): Observable<any> {
+    return this.servicio.get<any>(`${this.servidor}/por-dueno-identificacion/${nmidentificacion_dueno}`);
+  }
+
+  }
 

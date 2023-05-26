@@ -1,0 +1,151 @@
+<h1 class="titulo">Consultar Cita</h1>
+
+<div class="container">
+<button routerLink="/home" class="home">Home
+  <abbr title="Home">
+    <mat-icon>
+      home
+    </mat-icon>
+  </abbr>
+</button>
+
+<form [formGroup]="formCita" (ngSubmit)="buscarCita()">
+  <div class="form-group">
+    <label for="nmidentificacion_dueno">Identificación del dueño</label>
+    <input type="long" class="form-control" id="nmidentificacion_dueno" formControlName="nmidentificacion_dueno" required>
+  </div>
+  <button type="submit" class="search">Buscar Cita
+    <abbr title="Buscar">
+      <mat-icon>
+        search
+      </mat-icon>
+    </abbr>
+  </button>
+  <button class="cancel" (click)="limpiarFormulario()" >Cancelar
+    <abbr title="limpiar">
+      <mat-icon>
+        cancel
+      </mat-icon>
+    </abbr>
+     </button>
+</form>
+</div>
+<br>
+<hr>
+<div class="container_table">
+    <div class="col-md-12">
+      <h3>Resultados:</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Número Identificación Dueño</th>
+            <th>Nombre Mascota</th>
+            <th>Cedula Veterinario</th>
+            <th>Fecha Cita Programada</th>
+            <th>Hora Cita Programada</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cita of infoCita ">
+            <td>{{ cita.nmid }}</td>
+            <td (dblclick)="onEdit('nmidentificacion_dueno')">
+              <div *ngIf="cita.isEdit">
+                <input type="long" [(ngModel)]="cita.nmidentificacion_dueno" class="form-control" />
+              </div>
+              <div *ngIf="!cita.isEdit">
+                {{cita.nmidentificacion_dueno}}
+              </div>
+            </td>
+            <td (dblclick)="onEdit('dsnom_mascota')">
+              <div *ngIf="cita.isEdit">
+                <input type="text" [(ngModel)]="cita.dsnom_mascota" class="form-control" />
+              </div>
+              <div *ngIf="!cita.isEdit">
+                {{cita.dsnom_mascota}}
+              </div>
+            </td>
+            <td (dblclick)="onEdit('nmid_vet')">
+              <div *ngIf="cita.isEdit">
+                <input type="long" [(ngModel)]="cita.nmid_vet" class="form-control" />
+              </div>
+              <div *ngIf="!cita.isEdit">
+                {{cita.nmid_vet}}
+              </div>
+            </td>
+            <td (dblclick)="onEdit('dtf_cita')">
+              <div *ngIf="cita.isEdit">
+                <input type="date" [(ngModel)]="cita.dtf_cita" class="form-control" />
+              </div>
+              <div *ngIf="!cita.isEdit">
+                {{cita.dtf_cita}}
+              </div>
+            </td>
+            <td (dblclick)="onEdit('hr_cita')">
+              <div *ngIf="cita.isEdit">
+                <select name="hr_cita"  [(ngModel)]="cita.hr_cita" class="form-control">
+                  <option selected>Seleccione...</option>
+                    <option>10:00 am</option>
+                     <option>11:00 am</option>
+                     <option>12:00 pm</option>
+                     <option>1:00 pm</option>
+                     <option>2:00 pm</option>
+                    <option>3:00 pm</option>
+                  <option>4:00 pm</option>
+                <option>5:00 pm</option>
+               <option>6:00 pm</option>
+            <option>7:00 pm</option>
+          </select>
+              </div>
+              <div *ngIf="!cita.isEdit">
+                {{cita.hr_cita}}
+              </div>
+            </td>
+            <td>
+              <div *ngIf="cita.isEdit">
+                <button type="button" class="save" (click)="guardar(cita)">
+                  <abbr title="Guardar/Actualizar">
+                    <mat-icon>
+                      save
+                    </mat-icon>
+                  </abbr>
+                </button>
+                <button class="cancel" (click)="cita.isEdit= false">
+                  <abbr title="Cancelar">
+                    <mat-icon>
+                      cancel
+                    </mat-icon>
+                  </abbr>
+                </button>
+              </div>
+              <div *ngIf="!cita.isEdit">
+                <button type="button" class="edit" (click)="onEdit(cita)">
+                  <abbr title="Editar">
+                    <mat-icon>
+                      edit
+                    </mat-icon>
+                  </abbr>
+                </button>
+                <button type="button" class="delete" (click)=" borrarRegistro(cita.nmid)">
+                  <abbr title="Editar">
+                    <mat-icon>
+                      delete
+                    </mat-icon>
+                  </abbr>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+
+
+

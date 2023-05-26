@@ -1,0 +1,79 @@
+
+<h1 class="titulo"> Datos Usuario </h1>
+<br>
+
+<div class="container">
+
+  <br>
+
+  <button routerLink="/home" class="home">Home
+    <abbr title="Home">
+      <mat-icon>
+        home
+      </mat-icon>
+    </abbr>
+  </button>
+
+  <button routerLink="/ingresarmascota" class="home">Ingresar Mascota
+    <abbr title="ingresar">
+      <mat-icon>
+        add
+      </mat-icon>
+    </abbr>
+  </button>
+  <br>
+  <br>
+
+  <div >
+
+    <form class="registro-form" (ngSubmit)="crearRegistro()" [formGroup]="registroDuenoForm">
+
+
+      <label for="identificacion">Identificación dueño:</label>
+      <input type="long" id="identificacion" name="identificacion" formControlName="nmidentificacion">
+
+      <label for="tipo_identificacion">Tipo de identificación dueño:</label>
+      <select name="tipo_identificacion" id="tipo_identificacion" formControlName="dsT_identificacion">
+        <option selected>Seleccione...</option>
+          <option>tarjeta de identidad</option>
+            <option>cedula de ciudadania</option>
+          <option>tarjeta de extranjeria</option>
+        <option>cedula de extranjeria</option>
+      <option>NIT</option>
+     <option>Pasaporte</option>
+  <option>Documento extranjero</option>
+</select>
+
+<label for="nom_dueno">Nombre Dueño:</label>
+<input type="text" id="nom_dueno" name="nom_dueno" formControlName="dsnom_dueno">
+
+
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" id="ciudad" name="ciudad" formControlName="dsciudad">
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" formControlName="dsdireccion">
+
+      <label for="telefono">Teléfono:</label>
+      <input type="long" id="telefono" name="telefono" formControlName="nmtelefono">
+
+      <button type="submit" class="save" [disabled]="registroDuenoForm.invalid">Guardar
+        <abbr title="Guardar">
+          <mat-icon>
+            save
+          </mat-icon>
+        </abbr>
+      </button>
+
+      <button class="cancel" (click)="limpiarFormulario()">Cancelar
+        <abbr title="limpiar">
+          <mat-icon>
+            cancel
+          </mat-icon>
+        </abbr>
+         </button>
+    </form>
+
+  </div>
+
+</div>

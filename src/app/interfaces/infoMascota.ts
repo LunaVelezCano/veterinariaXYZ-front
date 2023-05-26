@@ -5,12 +5,7 @@ export interface infoMascota {
   dsespecie: string;
   dsraza: string;
   dtf_nacimiento: Date;
-  dsT_identificacion: string;
-  nmidentificacion: number;
-  dsnom_dueno: string;
-  dsciudad: string;
-  dsdireccion: string;
-  nmtelefono: number;
+  nmidentificacion_dueno: number;
   dtf_registro: Date;
 
 }

@@ -1,0 +1,63 @@
+<h1 class="titulo">Consultar Usuario</h1>
+
+<div class="container">
+<button routerLink="/home" class="home">Home
+  <abbr title="Home">
+    <mat-icon>
+      home
+    </mat-icon>
+  </abbr>
+</button>
+
+<form [formGroup]="formConsultaUsuario" (ngSubmit)="buscarDuenos()">
+  <div class="form-group">
+    <label for="nmidentificacion">Numero de Identificación</label>
+    <input type="long" class="form-control" id="nmidentificacion" formControlName="nmidentificacion" required>
+  </div>
+  <button type="submit" class="search">Buscar Usuarios
+    <abbr title="Buscar">
+      <mat-icon>
+        search
+      </mat-icon>
+    </abbr>
+  </button>
+  <button class="cancel" (click)="limpiarFormulario()" >Cancelar
+    <abbr title="limpiar">
+      <mat-icon>
+        cancel
+      </mat-icon>
+    </abbr>
+     </button>
+</form>
+</div>
+
+<br>
+<hr>
+<div class="container_table">
+    <div class="col-md-12">
+      <h3>Resultados:</h3>
+      <table class="table table-striped" >
+        <thead>
+          <tr>
+            <th>Numero Identificación</th>
+            <th>Tipo de Identificación</th>
+            <th>Nombre </th>
+            <th>Ciudad</th>
+            <th>Dirección</th>
+            <th>Número de Telefono</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tbody *ngIf="datosUsuario && datosUsuario.length > 0">
+            <tr>
+              <td>{{ datosUsuario[0].nmidentificacion }}</td>
+              <td>{{ datosUsuario[0].dsT_identificacion }}</td>
+              <td>{{ datosUsuario[0].dsnom_dueno }}</td>
+              <td>{{ datosUsuario[0].dsciudad }}</td>
+              <td>{{ datosUsuario[0].dsdireccion }}</td>
+              <td>{{ datosUsuario[0].nmtelefono }}</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>

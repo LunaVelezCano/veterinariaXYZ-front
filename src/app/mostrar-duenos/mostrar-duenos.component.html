@@ -1,0 +1,43 @@
+<h1 class="titulo">Usuarios</h1>
+<br>
+<br>
+<div class="container">
+  <button routerLink="/home" class="home">Home
+    <abbr title="Home">
+      <mat-icon>
+        home
+      </mat-icon>
+    </abbr>
+  </button>
+  <br>
+
+<br>
+<br>
+<div class="container_table">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Identificacion</th>
+          <th>Tipo de Identificación</th>
+          <th>Nombre</th>
+          <th>Ciudad</th>
+          <th>Dirección</th>
+          <th>Telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of infoDuenos">
+          <td>{{usuario.nmidentificacion }}</td>
+          <td>{{usuario.dsT_identificacion }}</td>
+          <td>{{usuario.dsnom_dueno }}</td>
+          <td>{{usuario.dsciudad }}</td>
+          <td>{{usuario.dsdireccion }}</td>
+          <td>{{usuario.nmtelefono }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+

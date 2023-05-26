@@ -1,0 +1,35 @@
+<h1 class="titulo">Medicos Veterinarios disponibles</h1>
+<br>
+<br>
+<div class="container">
+  <button routerLink="/home" class="home">Home
+    <abbr title="Home">
+      <mat-icon>
+        home
+      </mat-icon>
+    </abbr>
+  </button>
+  <br>
+
+<br>
+<br>
+<div class="container_table">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Identificacion</th>
+          <th>Nombre Medico</th>
+          <th>Telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vet of infoVet">
+          <td>{{vet.nmidenti_vet }}</td>
+          <td>{{vet.dsnom_vet }}</td>
+          <td>{{vet.nmtelefono }}</td>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

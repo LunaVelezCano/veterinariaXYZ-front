@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegistrarComponent } from './registrar.component';
+import { ProgramarCitaComponent } from './programar-cita.component';
 
-describe('RegistrarComponent', () => {
-  let component: RegistrarComponent;
-  let fixture: ComponentFixture<RegistrarComponent>;
+describe('ProgramarCitaComponent', () => {
+  let component: ProgramarCitaComponent;
+  let fixture: ComponentFixture<ProgramarCitaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegistrarComponent ]
+      declarations: [ ProgramarCitaComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RegistrarComponent);
+    fixture = TestBed.createComponent(ProgramarCitaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

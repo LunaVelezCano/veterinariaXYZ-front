@@ -5,12 +5,21 @@
 
 .container{
   background-color: rgba(105, 188, 187, 255);;
-  width:60%;
+  width:90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
+}
+
+.registro-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 5px;
 }
 
 .home{
@@ -28,15 +37,6 @@
   color: white;
   padding-top: 1%;
   text-align: center;
-}
-
-.registro-form {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
 }
 
 .save {
@@ -58,13 +58,17 @@
 
 .cancel {
   background-color: rgba(71, 115, 178, 255);
-  width: 15%;
+  width: 150px;
+  max-width: 200px;
   height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   border-radius: 0.5rem;
-  margin-left: 5%;
+  border-style: hidden;
   color: white;
   padding-top: 1%;
   text-align: center;
 }
-
-

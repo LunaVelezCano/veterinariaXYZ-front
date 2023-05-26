@@ -1,0 +1,64 @@
+<h1 class="titulo"> Datos Mascota </h1>
+<br>
+
+<div class="container">
+  <br>
+  <button routerLink="/home" class="home">Home
+    <abbr title="Home">
+      <mat-icon>
+        home
+      </mat-icon>
+    </abbr>
+  </button>
+  <br>
+  <button routerLink="/mostrarMascotas" class="mostrarMascotas">Ver mascotas
+    <abbr title="Ver">
+      <mat-icon>
+        search
+      </mat-icon>
+    </abbr>
+  </button>
+  <br>
+  <br>
+  <div >
+
+    <form class="registro-form" (ngSubmit)="crearRegistro()" [formGroup]="registroForm">
+
+      <label for="nom_mascota">Nombre de la mascota:</label>
+      <input type="text" id="nom_mascota" name="nom_mascota" formControlName="dsnom_mascota">
+
+      <label for="especie">Especie:</label>
+      <input type="text" id="especie" name="especie" formControlName="dsespecie">
+
+      <label for="raza">Raza:</label>
+      <input type="text" id="raza" name="raza" formControlName="dsraza">
+
+      <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+      <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" formControlName="dtf_nacimiento">
+
+      <label for="fecha_registro">Fecha registro:</label>
+      <input type="date" id="fecha_registro" name="fecha_registro" formControlName="dtf_registro">
+
+      <label for="identificacion">Identificación dueño:</label>
+      <input type="long" id="identificacion" name="identificacion" formControlName="nmidentificacion_dueno">
+
+      <button type="submit" class="save" [disabled]="registroForm.invalid">Guardar
+        <abbr title="Guardar">
+          <mat-icon>
+            save
+          </mat-icon>
+        </abbr>
+      </button>
+
+      <button class="cancel" (click)="limpiarFormulario()">Cancelar
+        <abbr title="limpiar">
+          <mat-icon>
+            cancel
+          </mat-icon>
+        </abbr>
+         </button>
+    </form>
+
+  </div>
+
+</div>

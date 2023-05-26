@@ -1,0 +1,75 @@
+<h1 class="titulo"> Programar Cita </h1>
+<br>
+
+<div class="container">
+  <br>
+  <button routerLink="/home" class="home">Home
+    <abbr title="Home">
+      <mat-icon>
+        home
+      </mat-icon>
+    </abbr>
+  </button>
+  <br>
+
+  <br>
+  <div >
+
+    <form class="cita-form" (ngSubmit)="ProgramarCita()" [formGroup]="CitaForm">
+
+
+      <label for="identificacion">Identificación dueño:</label>
+      <input type="long" id="identificacion" name="identificacion" formControlName="nmidentificacion_dueno">
+
+      <label for="nom_mascota">Nombre de la mascota:</label>
+      <input type="text" id="nom_mascota" name="nom_mascota" formControlName="dsnom_mascota">
+
+      <label for="nmid_vet">Cedula Veterinario:</label>
+      <select name="nmid_vet" id="nmid_vet" formControlName="nmid_vet">
+        <option selected>Seleccione...</option>
+        <option>43454252</option>
+           <option>98661354</option>
+           <option>21407307</option>
+         <option>1017126560</option>
+        <option>92746700</option>
+      </select>
+
+      <label for="dtf_cita">Fecha Para la cita:</label>
+      <input type="date" id="dtf_cita" name="dtf_cita" formControlName="dtf_cita">
+
+      <label for="hr_cita">Hora: </label>
+      <select name="hr_cita" id="hr_cita" formControlName="hr_cita">
+        <option selected>Seleccione...</option>
+          <option>10:00 am</option>
+           <option>11:00 am</option>
+           <option>12:00 pm</option>
+           <option>1:00 pm</option>
+           <option>2:00 pm</option>
+          <option>3:00 pm</option>
+        <option>4:00 pm</option>
+      <option>5:00 pm</option>
+     <option>6:00 pm</option>
+  <option>7:00 pm</option>
+</select>
+
+
+      <button type="submit" class="save" [disabled]="CitaForm.invalid">Guardar
+        <abbr title="Guardar">
+          <mat-icon>
+            save
+          </mat-icon>
+        </abbr>
+      </button>
+
+      <button class="cancel" (click)="limpiarFormulario()">Cancelar
+        <abbr title="limpiar">
+          <mat-icon>
+            cancel
+          </mat-icon>
+        </abbr>
+         </button>
+    </form>
+
+  </div>
+
+</div>
